@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetching Json data file</title>
+</head>
+<body>
+    <script>
+        fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            console.log('Name: ', data.name);
+            console.log('Age: ', data.age);
+            console.log('City: ', data.city);
+        })
+        .catch(error => console.error('Error fetching:', error));
+    </script>
+</body>
+</html>
