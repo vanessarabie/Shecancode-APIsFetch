@@ -5,17 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fetching Json data file</title>
 </head>
-<body>
+<body style="display: grid; justify-content: center;">
+
+    <h1>List of fruits</h1><br>
+    <ul>
+
+    </ul>
     <script>
+
+        const listEl = document.querySelector('ul');
         fetch('data.json')
         .then(response => response.json())
         .then(data => {
-            console.log(data);
-            console.log('Name: ', data.name);
-            console.log('Age: ', data.age);
-            console.log('City: ', data.city);
-        })
-        .catch(error => console.error('Error fetching:', error));
+            // console.log(data);
+            // console.log('Name: ', data.name);
+            // console.log('Age: ', data.age);
+            // console.log('City: ', data.city);
+
+            data.forEach(post => {
+                listEl.insertAdjacentHTML('beforeend', `<li>${post.fruit}</>`);
+            });
+        });
+        
     </script>
 </body>
 </html>

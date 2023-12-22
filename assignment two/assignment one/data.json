@@ -1,5 +1,10 @@
+[{
+  "fruit": "Apple" ,
+  "size": "big",
+  "color": "Green" 
+},
 {
-  "name": "Vanessa Rm" ,
-  "age": "12",
-  "city": "France" 
-}
+  "fruit": "Mango" ,
+  "size": "big",
+  "color": "Yellow" 
+}]
